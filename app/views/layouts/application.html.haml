@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title
+      = title
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = render 'header'
+    = render 'nav'
+    = render 'errors'
+    #main
+      = yield
+    = render 'footer'

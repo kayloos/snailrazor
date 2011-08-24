@@ -1,5 +1,5 @@
 module ApplicationHelper
   def title
-    "Snailrazor - " + @title
+    !@title.nil? ? "Snailrazor - " + @title : "Snailrazor"
   end
 end
