@@ -14,22 +14,30 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'haml'
 gem "formtastic", "~> 2.0.0.rc4"
+gem 'jquery-rails'
 
 gem "devise"
+
+# Markdown
 gem "redcarpet"
-gem 'jquery-rails'
+gem 'albino'
+gem 'nokogiri'
+
 
 group :development do
   gem "cucumber-rails"
   gem "haml-rails"
+  gem "thin"
+  gem "faker"
 end
 
 group :test, :development do
   gem "rspec-rails"
   gem "cucumber"
   gem "spork"
-  gem "capybara"
   gem "webrat"
+  gem "capybara"
+  gem "launchy"
 end
 
 group :test, :cucumber do
