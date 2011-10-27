@@ -1,11 +1,15 @@
 %h2.post_title
   = @post.title
 .post_body
-  = markdown @post.body
+  = preserve markdown @post.body
 = link_to "Edit post", edit_post_path(@post), :class => "edit_post" if user_signed_in?
+%br/
+= link_to "Delete post", post_path(@post), :method => :delete, :confirm => "Are you sure?"
+%hr/
 .comments
   = semantic_form_for(@comment) do |form|
-    = form.inputs :author, :body
+    = form.input :author
+    = form.input :body
     = form.input :post_id, :as => :hidden
     = form.commit_button
   - @comments.each do |comment|

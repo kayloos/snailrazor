@@ -2,7 +2,13 @@ Snailrazor::Application.routes.draw do
 
   devise_for :users
 
-  resources :posts, :comments
+  resources :comments
+
+  resources :posts do
+    collection do
+      post :preview
+    end
+  end
 
   resource :pages do
     member do

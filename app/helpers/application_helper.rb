@@ -6,7 +6,7 @@ module ApplicationHelper
   def markdown(text)
     return unless text.class == String
     options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
-    preserve syntax_highlighter(Redcarpet.new(text, *options).to_html).html_safe
+    syntax_highlighter(Redcarpet.new(text, *options).to_html).html_safe
   end
 
   def syntax_highlighter(html)

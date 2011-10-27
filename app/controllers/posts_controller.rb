@@ -14,6 +14,11 @@ class PostsController < ApplicationController
     @comments = @post.comments
   end
 
+  def preview
+    @text = params["text"]
+    render :layout => false
+  end
+
   def new
     @title = "Add post"
 
@@ -46,6 +51,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:success] = "Post has been destroyed"
+    else
+      flash[:error] = "Unable to destroy post"
+    end
+    redirect_to posts_path
   end
 end

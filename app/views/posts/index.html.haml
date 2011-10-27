@@ -1,8 +1,10 @@
 = link_to "Add post", new_post_path, :class => "new_post_link" if user_signed_in?
 - if @posts.any?
   - @posts.each do |post|
-    %h2.post_title
-      = link_to post.title, post_path(post)
-    .post_body
-      = markdown post.body
-    = link_to "Read more", post_path(post), :class => "post_read_more"
+    .post
+      %h2.post_title
+        = link_to post.title, post_path(post)
+      .post_body
+        = preserve markdown post.body
+      = link_to "Read more", post_path(post), :class => "post_read_more"
+    %hr

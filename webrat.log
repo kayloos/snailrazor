@@ -1045,3 +1045,20 @@ REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REF
 REQUESTING PAGE: GET /posts/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
 REQUESTING PAGE: POST /posts with {"utf8"=>"✓", "post"=>{"title"=>"Title", "body"=>"Content"}, "commit"=>"Create Post"} and HTTP headers {"HTTP_REFERER"=>"/posts/new"}
 REQUESTING PAGE: GET http://www.example.com/posts with {} and HTTP headers {"HTTP_REFERER"=>"/posts"}
+REQUESTING PAGE: GET /posts/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /comments with {"utf8"=>"✓", "comment"=>{"author"=>"Snizz FizzGewinks", "body"=>"Witty comment", "post_id"=>"1"}, "commit"=>"Create Comment"} and HTTP headers {"HTTP_REFERER"=>"/posts/1"}
+REQUESTING PAGE: GET /posts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+REQUESTING PAGE: GET /posts/1 with {} and HTTP headers {}
+REQUESTING PAGE: POST /comments with {"utf8"=>"✓", "comment"=>{"author"=>"", "body"=>"", "post_id"=>"1"}, "commit"=>"Create Comment"} and HTTP headers {"HTTP_REFERER"=>"/posts/1"}
+REQUESTING PAGE: GET /posts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/comments"}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"✓", "user"=>{"email"=>"gryn@example.com", "password"=>"foobar", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /posts/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+REQUESTING PAGE: POST /posts with {"utf8"=>"✓", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Create Post"} and HTTP headers {"HTTP_REFERER"=>"/posts/new"}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"✓", "user"=>{"email"=>"gryn@example.com", "password"=>"foobar", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /posts/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+REQUESTING PAGE: POST /posts with {"utf8"=>"✓", "post"=>{"title"=>"Title", "body"=>"Content"}, "commit"=>"Create Post"} and HTTP headers {"HTTP_REFERER"=>"/posts/new"}
+REQUESTING PAGE: GET http://www.example.com/posts with {} and HTTP headers {"HTTP_REFERER"=>"/posts"}
