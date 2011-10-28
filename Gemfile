@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -43,6 +43,9 @@ group :test, :cucumber do
   gem "factory_girl_rails"
 end
 
+group :production do
+  gem "therubyracer"
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
