@@ -7,8 +7,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @title = "Show post"
+    redirect_to(edit_post_path(params[:id])) if user_signed_in?
 
+    @title = "Show post"
     @post = Post.find(params[:id])
     @comment = @post.comments.build
     @comments = @post.comments
@@ -40,7 +41,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-
     render "new"
   end
 

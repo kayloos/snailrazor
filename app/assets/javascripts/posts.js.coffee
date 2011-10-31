@@ -8,4 +8,4 @@ $(document).ready ->
       $.post '/posts/preview', ( text: text ), ((data) ->
             $("#post_preview").html(data)), "html"
 
-    time = setTimeout ajaxRequest, 500
+    time = setTimeout ajaxRequest, 5000

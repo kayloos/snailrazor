@@ -4,7 +4,10 @@
     .post
       %h2.post_title
         = link_to post.title, post_path(post)
+      .post_date
+        = pretty_date post.created_at
       .post_body
-        = preserve markdown post.body
+        = preserve truncate(markdown(post.body), :length => 1000)
       = link_to "Read more", post_path(post), :class => "post_read_more"
+      = link_to "Delete post", post_path(post), :method => :delete, :confirm => "Are you sure?" if user_signed_in?
     %hr
