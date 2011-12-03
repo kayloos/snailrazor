@@ -1,8 +1,10 @@
 body {
-  font-family: Georgia;
+  font-family: Palatino, Georgia, serif;
   font-size: 18px;
-  width: 640px;
+  width: 520px;
   margin: 0 auto;
+  background: #EEE;
+  color: black;
 }
 pre {
   background-color: #F3F3F3;
@@ -14,7 +16,17 @@ header {
   text-align: center;
   margin: 0;
   #logo {
-    margin: 20px 0 0 0;
+    margin: 1em 0 1em 0;
+    a {
+      font-size: 4em;
+      color: rgba(185,0,0,0.9);
+      text-decoration: none;
+      font-family: Georgia;
+      text-shadow: 1px 1px 1px #300;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 }
 .post_title {
@@ -57,7 +69,7 @@ nav {
 }
 #main {
   font-size: 1em;
-  margin: 0;
+  margin: 1.5em 0 1.5em 0;
   h1, h2, h3, h4 {
     margin: 0;
   }
@@ -86,7 +98,7 @@ nav {
   }
   ul {
     li {
-      margin: 1em 0;
+      margin: 0.25em 0;
     }
   }
   .post, .post_body {
