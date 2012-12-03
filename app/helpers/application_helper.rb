@@ -15,6 +15,6 @@ module ApplicationHelper
       append = "th"
     end
 
-    date.strftime("The %d#{append} of %B, %Y")
+    date.strftime("The %-d#{append} of %B, %Y")
   end
 end

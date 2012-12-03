@@ -9,3 +9,7 @@ $(document).ready ->
             $("#post_preview").html(data)), "html"
 
     time = setTimeout ajaxRequest, 5000
+
+  $(".post_read_more").bind 'keyup', (event) ->
+    ajaxRequest = ->
+      $.get $(this).attr("href") ->

@@ -1,1 +1,1 @@
-rvm use 1.9.2@snailrazor
+rvm use ruby-1.9.3@snailrazor --create
