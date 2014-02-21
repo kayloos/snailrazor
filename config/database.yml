@@ -8,7 +8,6 @@ development:
   encoding: unicode
   database: snailrazor_development
   username: kalusn
-  password:
   pool: 5
   timeout: 5000
 
@@ -20,13 +19,12 @@ test: &test
   encoding: unicode
   database: snailrazor_test
   username: kalusn
-  password:
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  host: ec2-54-197-237-231.compute-1.amazonaws.com
+  encoding: unicode
   database: d5p9k2psn6bflt
   user: hogfqdkbhkfxus
   password: OkRygfdy7tmc4DzlCp_33JrBqx
