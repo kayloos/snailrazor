@@ -4,8 +4,11 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: snailrazor_development
+  username: kalusn
+  password:
   pool: 5
   timeout: 5000
 
@@ -13,14 +16,20 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: snailrazor_test
+  username: kalusn
+  password:
   pool: 5
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  host: ec2-54-197-237-231.compute-1.amazonaws.com
+  database: d5p9k2psn6bflt
+  user: hogfqdkbhkfxus
+  password: OkRygfdy7tmc4DzlCp_33JrBqx
   pool: 5
   timeout: 5000
 

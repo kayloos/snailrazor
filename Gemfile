@@ -2,11 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3', '1.3.6'
-
 # Asset template engines
 gem 'json', '1.7.3'
 gem 'sass-rails', '3.2.5'
@@ -15,6 +10,8 @@ gem 'uglifier', '1.2.6'
 gem 'haml', '3.1.6'
 gem "formtastic", "~> 2.0.0.rc4"
 gem 'jquery-rails', '2.0.2'
+
+gem "pg"
 
 # User engine
 gem "devise", '2.1.2'
@@ -33,6 +30,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'sqlite3', '1.3.6'
   gem "rspec-rails", '2.10.1'
   gem "spork", '0.9.2'
   gem "capybara", '1.1.2'
