@@ -8,8 +8,8 @@
         = pretty_date post.created_at
       .post_body
         = markdown(truncate(post.body, :length => 768))
+      = link_to "Delete post", post_path(post), :class => "post_delete_link", :method => :delete, :confirm => "Are you sure?" if user_signed_in?
       = link_to "Read more", post_path(post), :class => "post_read_more"
-      = link_to "Delete post", post_path(post), :method => :delete, :confirm => "Are you sure?" if user_signed_in?
     %hr
 - else
   %h2 There are no posts on the weblog yet.
