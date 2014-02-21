@@ -1,0 +1,199 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Palatino, Georgia, serif;
+  font-size: 16px;
+  width: 740px;
+  margin: 0 auto;
+  background: #222;
+  color: black;
+}
+pre {
+  background-color: #F3F3F3;
+  border: solid 1px #CCC;
+  padding: 5px 10px;
+  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+}
+#main {
+  font-size: 1em;
+  margin: 0 0 0 0em;
+  padding: 1em 6em 2em 6em;
+  background: #FFF;
+  box-shadow: 0 0 1px 1px #FFF;
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
+  h1 {
+    font-size: 2.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  p {
+    line-height: 1.4em;
+    margin: 0 0 15px 0;
+  }
+  hr {
+    background: #FFF;
+    border: 0;
+    height: 1px;
+    width: 60%;
+    margin: 30px auto;
+    box-shadow: 0px 0px 1px 1px #DDD;
+  }
+  ul {
+    li {
+      margin: 0.25em 0;
+    }
+  }
+  a {
+    color: rgb(185,0,0);
+    &:hover {
+      color: rgb(240,60,60);
+    }
+  }
+  .post, .post_body {
+    text-align: justify;
+  }
+  .post_date {
+    color: #999;
+    margin: 0 0 15px;
+    font-style: italic;
+  }
+  .post {
+    margin: 1.5em 0 1.5em 0;
+    .post_title {
+    }
+    .post_title a, .post_read_more {
+      color: #444;
+      text-decoration: none;
+      &:hover {
+        color: #777;
+      }
+    }
+    .post_read_more {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
+header {
+  text-align: center;
+  margin: 0;
+  #logo {
+    margin: 0 0 1em 0;
+    a {
+      font-size: 3em;
+      color: rgba(225,50,50,0.9);
+      text-decoration: none;
+      font-family: Georgia;
+      text-shadow: 1px 2px 1px #500;
+      &:hover {
+        color: rgba(245,60,60,0.9);
+      }
+    }
+  }
+}
+nav {
+  text-align: center;
+  ul {
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+    li {
+      a {
+        color: #666;
+        font-style: italic;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5em;
+        &:hover {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+footer {
+  background: #EEE;
+}
+form {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  label {
+    display: block;
+  }
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    font-size: 1em;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    border: 1px solid black;
+    padding: 5px;
+    width: 20em;
+  }
+  input[type="submit"] {
+    font-size: 1.5em;
+    margin: 1em 0 1em 0;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  }
+  label {
+    margin: 0.5em 0 0.25em 0;
+  }
+  textarea {
+    width: 100%;
+    height: 20em;
+    font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+  }
+  #comment_body {
+    height: 8em;
+    width: 25em;
+  }
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.sign {
+  margin: 10px auto;
+  text-align: center;
+  a {
+    color: rgba(185,0,0,0.9);
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 0 0 2px #888;
+    &:hover {
+      color: rgba(240,60,60,1.0);
+    }
+  }
+}
+
+#post_preview {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+@import "pygments"

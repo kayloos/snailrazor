@@ -2,6 +2,8 @@
   = form.inputs :title, :body
   = form.commit_button
 
+%button.preview Preview
+
 %h1 Preview
 #post_preview
   = preserve markdown @post.body

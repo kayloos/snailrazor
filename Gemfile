@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -20,15 +20,16 @@ gem 'jquery-rails', '2.0.2'
 gem "devise", '2.1.2'
 
 # Markdown
-gem "redcarpet", "1.17.2"
-gem 'albino', '1.3.3'
-gem 'nokogiri', '1.5.5'
+gem "redcarpet", "~> 2.2.2"
+gem "pygments.rb", "~> 0.4.2"
+gem 'nokogiri', "~> 1.5.6"
 
 
 group :development do
   gem "haml-rails", '0.3.4'
   gem "thin", '1.3.1'
   gem "faker", '1.0.1'
+  gem "pry"
 end
 
 group :test, :development do
