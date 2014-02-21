@@ -21,10 +21,11 @@ gem "redcarpet", "~> 2.2.2"
 gem "pygments.rb", "~> 0.4.2"
 gem 'nokogiri', "~> 1.5.6"
 
+gem "unicorn"
+
 
 group :development do
   gem "haml-rails", '0.3.4'
-  gem "thin", '1.3.1'
   gem "faker", '1.0.1'
   gem "pry"
 end
