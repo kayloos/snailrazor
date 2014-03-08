@@ -25,9 +25,10 @@ test: &test
 production:
   adapter: postgresql
   encoding: unicode
-  database: d5p9k2psn6bflt
-  user: hogfqdkbhkfxus
-  password: OkRygfdy7tmc4DzlCp_33JrBqx
+  database: snailrazor_production
+  username: snailrazor
+  password: d8Ud)#kLZm82!?
+  port: 5433
   pool: 5
   timeout: 5000
 
